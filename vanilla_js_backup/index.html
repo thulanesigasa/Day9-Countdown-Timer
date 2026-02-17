@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9: Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Countdown Timer</h1>
+            <p>Set your target date and watch the time fly!</p>
+        </header>
+
+        <div class="input-group">
+            <label for="target-datetime">Select Target Date & Time:</label>
+            <input type="datetime-local" id="target-datetime">
+            <button id="start-btn">Start Countdown</button>
+            <button id="reset-btn" class="hidden">Reset</button>
+        </div>
+
+        <div class="timer-display hidden" id="timer-display">
+            <div class="time-unit">
+                <span id="days">00</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-unit">
+                <span id="hours">00</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-unit">
+                <span id="minutes">00</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-unit">
+                <span id="seconds">00</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --bg-color: #000000;
+    --text-color: rgba(255, 255, 255, 0.5);
+    --accent-color: #FF9800;
+    /* Orange */
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --input-border: rgba(255, 255, 255, 0.1);
+    --font-family: 'Outfit', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mil-wrapper {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--input-border);
+}
+
+.mil-h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.mil-h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.mil-thin {
+    font-weight: 300;
+}
+
+.mil-accent {
+    color: var(--accent-color);
+}
+
+.mil-text-lg {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.mil-light-soft {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.mil-muted {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.mil-upper {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.mil-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    height: 60px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--input-border);
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    text-align: center;
+    color-scheme: dark;
+    /* Keep calendar icon valid */
+}
+
+.mil-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.mil-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    background-color: var(--accent-color);
+    color: rgb(0, 0, 0);
+    border-radius: 70px;
+    padding: 0 40px;
+    height: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+    margin-top: 1rem;
+}
+
+.mil-button:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+}
+
+.timer-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Vertical alignment */
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-value {
+    font-size: 4rem;
+    /* Prominent numbers */
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+}
+
+.label {
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+.separator {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: -1.5rem;
+    /* Align better with large text */
+}
+
+@media (max-width: 600px) {
+    .mil-h1 {
+        font-size: 2rem;
+    }
+
+    .time-value {
+        font-size: 2.5rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .timer-display {
+        gap: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+}
